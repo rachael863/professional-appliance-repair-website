@@ -1,0 +1,61 @@
+{
+  "businessName": "Professional Appliance Repair",
+  "phone": "504-454-5040",
+  "phoneE164": "+15044545040",
+  "hours": "Monday–Friday, 8:00 AM–4:30 PM",
+  "serviceZipCodes": [
+    "70001",
+    "70002",
+    "70003",
+    "70004",
+    "70005",
+    "70006",
+    "70032",
+    "70043",
+    "70053",
+    "70054",
+    "70055",
+    "70056",
+    "70057",
+    "70058",
+    "70062",
+    "70065",
+    "70072",
+    "70114",
+    "70115",
+    "70116",
+    "70117",
+    "70118",
+    "70119",
+    "70122",
+    "70123",
+    "70124",
+    "70131"
+  ],
+  "diagnosticFee": "Starts at $129 plus sales tax; ZIP-specific travel fees may apply",
+  "diagnosticCoverage": "30 days for the same appliance and same issue",
+  "laborWarranty": "30 days for the same issue",
+  "partsWarranty": "Manufacturer-specific, typically 90 days to 1 year",
+  "credentials": [
+    "EPA Section 608-certified technicians",
+    "GE Factory Authorized"
+  ],
+  "specialtyBrands": [
+    "ILVE",
+    "Forno",
+    "EuroChef",
+    "Verona",
+    "THOR",
+    "NXR"
+  ],
+  "reviewSources": [
+    "Google — 3 profiles",
+    "Facebook"
+  ],
+  "remainingContent": [
+    "Approved review excerpts and current counts",
+    "Travel-fee amount for each applicable ZIP",
+    "Final privacy and accessibility policy text",
+    "Production lead-form endpoint"
+  ]
+}
