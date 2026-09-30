@@ -31,6 +31,6 @@ createServer(async (request, response) => {
   } catch {
     response.writeHead(404).end('Not found');
   }
-}).listen(port, () => {
+}).listen(port, '127.0.0.1', () => {
   process.stdout.write(`Preview: http://localhost:${port}\n`);
 });
