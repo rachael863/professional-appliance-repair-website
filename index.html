@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="One-page Professional Appliance Repair website prototype for Greater New Orleans.">
+<title>Professional Appliance Repair | Greater New Orleans</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="utility"><div class="wrap"><span>Serving New Orleans &amp; surrounding areas</span><span>Mon–Fri 8:00 AM–4:30 PM • Residential appliance repair</span></div></div>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Professional Appliance Repair home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a4.5 4.5 0 0 0-5.8 5.8L3 18l3 3 5.9-5.9a4.5 4.5 0 0 0 5.8-5.8l-2.8 2.8-3-3 2.8-2.8Z"/></svg></span>
+      <span class="brand-text">Professional<br>Appliance Repair<small>GREATER NEW ORLEANS</small></span>
+    </a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a><a href="#standards">Our standards</a><a href="#area">Service area</a><a href="#faqs">FAQs</a>
+      <div class="actions"><a class="btn btn-outline" href="tel:+15044545040" aria-label="Call Professional Appliance Repair at 504-454-5040">Call 504-454-5040</a><a class="btn btn-primary" href="#request">Request service →</a></div>
+    </div>
+    <div class="actions desktop-actions"><a class="btn btn-outline" href="tel:+15044545040" aria-label="Call Professional Appliance Repair at 504-454-5040">Call 504-454-5040</a><a class="btn btn-primary" href="#request">Request service →</a></div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Local • Residential • Appliance repair</span>
+      <h1>Your appliance quit. Your day doesn’t have to.</h1>
+      <p class="lead">Tell us what is broken and where you are. Our team will confirm whether we can help and explain the next step—without the runaround.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#request">Request service <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="tel:+15044545040">Call 504-454-5040 <span aria-hidden="true">↗</span></a></div>
+      <p class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 10v6m0-9h.01"/></svg>No obligation until an appointment is confirmed.</p>
+    </div>
+    <div class="hero-visual" aria-label="Illustration of a technician inspecting a refrigerator">
+      <div class="scene"><div class="window"></div><div class="floor"></div><div class="fridge"><div class="handle"></div></div><div class="tech"><div class="tech-head"></div><div class="tech-cap"></div><div class="tech-body"></div><div class="tech-arm"></div><div class="tech-leg"></div><div class="tech-leg two"></div><div class="tech-badge"></div></div></div>
+      <form class="intake" id="quickForm">
+        <strong>What’s broken?</strong>
+        <div class="mini-field"><label for="quickAppliance">Appliance</label><select id="quickAppliance" required><option value="">Choose one</option><option>Refrigerator</option><option>Washer</option><option>Dryer</option><option>Dishwasher</option><option>Oven or range</option><option>Ice maker</option><option>Other appliance</option></select></div>
+        <div class="mini-field"><label for="quickZip">ZIP code</label><input id="quickZip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="e.g. 70115" required></div>
+        <button class="btn btn-primary" type="submit">Continue →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Trust points requiring owner verification">
+  <div class="wrap proof-grid">
+    <div class="proof-item"><span class="icon-dot">◎</span><span><strong>Locally operated</strong><span class="verify">Ownership wording to verify</span></span></div>
+    <div class="proof-item"><span class="icon-dot">EPA</span><span><strong>Section 608 certified</strong><span class="verify">Regulated refrigerant handling</span></span></div>
+    <div class="proof-item"><span class="icon-dot">GE</span><span><strong>GE Factory Authorized</strong><span class="verify">Manufacturer credential confirmed</span></span></div>
+    <div class="proof-item"><span class="icon-dot">30</span><span><strong>30-day labor coverage</strong><span class="verify">Same issue; parts terms vary</span></span></div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Choose your appliance</span><h2>We repair the appliances you rely on.</h2><p>Select a category to prefill the service request. We work on most appliance brands, including less-common names such as ILVE, Forno, EuroChef, Verona, THOR, and NXR. Model and parts support are confirmed when scheduling.</p></div><a class="btn btn-outline" href="#request">Request service</a></div>
+    <div class="service-grid">
+      <button class="service-card" data-appliance="Refrigerator"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M6 10h12M9 6v2m0 5v3"/></svg></span><h3>Refrigerator</h3><p>Cooling, freezing, leaking, noise, ice and temperature problems.</p><span class="arrow">→</span></button>
+      <button class="service-card" data-appliance="Washer"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M6 6h.01M10 6h5"/></svg></span><h3>Washer</h3><p>Drain, spin, fill, leak, vibration and cycle concerns.</p><span class="arrow">→</span></button>
+      <button class="service-card" data-appliance="Dryer"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M6 6h.01m3 0h.01M9 13c2-2 4 2 6 0"/></svg></span><h3>Dryer</h3><p>Heating, tumbling, airflow, noise and shutdown issues.</p><span class="arrow">→</span></button>
+      <button class="service-card" data-appliance="Dishwasher"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M4 8h16M8 5h.01m3 0h.01M8 13h8m-9 4h10"/></svg></span><h3>Dishwasher</h3><p>Drainage, cleaning, leaking, drying and control problems.</p><span class="arrow">→</span></button>
+      <button class="service-card" data-appliance="Oven or range"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="7" cy="6" r="1"/><circle cx="12" cy="6" r="1"/><rect x="6" y="10" width="12" height="8" rx="1"/></svg></span><h3>Oven &amp; range</h3><p>Heating, ignition, controls and temperature concerns.</p><span class="arrow">→</span></button>
+      <button class="service-card" data-appliance="Ice maker"><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14l-1 16H6L5 4Z"/><path d="M8 9h3v3H8zm5 4h3v3h-3zM13 7h3v3h-3z"/></svg></span><h3>Ice maker</h3><p>Production, dispensing, leaking and freeze-up issues.</p><span class="arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow" style="color:var(--amber)">A clear service path</span><h2>Service without the runaround.</h2></div><p>This sequence sets expectations without promising timing, pricing, parts availability, or a first-visit repair before those policies are confirmed.</p></div>
+    <div class="steps"><div class="step"><div><h3>Tell us what’s wrong</h3><p>Share the appliance, symptom, ZIP code, and best contact method.</p></div></div><div class="step"><div><h3>We confirm the visit</h3><p>A team member checks coverage and explains the appointment process.</p></div></div><div class="step"><div><h3>Technician diagnoses</h3><p>The appliance is inspected and the options are explained.</p></div></div><div class="step"><div><h3>Approve before repair</h3><p>No work begins until the customer understands and approves it.</p></div></div></div>
+  </div>
+</section>
+
+<section class="section trust" id="standards">
+  <div class="wrap trust-grid">
+    <div class="home-card" role="img" aria-label="Illustration of a technician explaining a washer diagnosis"><div class="scene-note">Real team photography recommended</div><div class="washer"></div><div class="person"><div class="head"></div><div class="hair"></div><div class="body"></div><div class="arm"></div><div class="leg"></div><div class="leg two"></div></div></div>
+    <div><span class="eyebrow">A better in-home experience</span><h2>Local people. Straight answers.</h2><p class="lead">Trust comes from what the company can demonstrate—not from generic badges. These standards should be published only after operations confirms them.</p>
+      <div class="standards">
+        <div class="standard"><span class="icon-dot">01</span><div><h3>Know who is arriving</h3><p>Confirm technician identity and arrival communication policy.</p></div></div>
+        <div class="standard"><span class="icon-dot">02</span><div><h3>See the estimate before work</h3><p>Explain diagnosis, authorization, fees, and customer choices in plain language.</p></div></div>
+        <div class="standard"><span class="icon-dot">03</span><div><h3>Respect the home</h3><p>Document the company’s in-home care, cleanup, and conduct standards.</p></div></div>
+        <div class="standard"><span class="icon-dot">04</span><div><h3>Leave with written coverage details</h3><p>Labor coverage is 30 days for the same issue. Parts coverage is set by the manufacturer and typically ranges from 90 days to one year.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section area" id="area">
+  <div class="wrap area-grid">
+    <div><span class="eyebrow">Greater New Orleans</span><h2>Check whether you’re in our service area.</h2><p class="lead">Service is offered in the listed ZIP codes. Diagnostic visits start at $129 plus sales tax; the exact fee varies by ZIP because additional travel charges apply in specific areas.</p>
+      <form class="zip-box" id="zipForm"><label for="areaZip" style="display:block;font-weight:850;margin-bottom:9px">Enter your ZIP code</label><div class="zip-row"><input id="areaZip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="5-digit ZIP" required><button class="btn btn-primary" type="submit">Check ZIP</button></div><p class="status" id="zipStatus" aria-live="polite">We’ll use your ZIP to route the request for confirmation.</p></form>
+      <div class="area-chips" aria-label="Confirmed service ZIP groups"><span class="chip">70001–70006</span><span class="chip">70032</span><span class="chip">70043</span><span class="chip">70053–70058</span><span class="chip">70062</span><span class="chip">70065</span><span class="chip">70072</span><span class="chip">70114–70119*</span><span class="chip">70122–70124*</span><span class="chip">70131</span></div><p class="help" style="margin-top:10px">*Exact confirmed 701 ZIPs: 70114, 70115, 70116, 70117, 70118, 70119, 70122, 70123, and 70124.</p>
+    </div>
+    <div class="map" aria-label="Abstract service-area illustration; not a geographic map">
+      <svg viewBox="0 0 640 420" preserveAspectRatio="none" aria-hidden="true"><rect width="640" height="420" fill="#fff9ef"/><g stroke="#d9ddd5" stroke-width="2" fill="none" opacity=".8"><path d="M-20 80L660 280M-20 160L660 360M60-20L240 440M180-20L360 440M320-20L500 440M480-20L660 400"/><path d="M0 40C160 170 210 40 350 150S510 320 680 190"/><path d="M-20 310C130 220 210 360 340 270S510 160 680 250"/></g><path d="M-30 255C95 205 195 330 310 258S520 150 690 240" fill="none" stroke="#9bc5d2" stroke-width="40" opacity=".9"/><path d="M420 80a90 90 0 1 0 80 145 70 70 0 1 1-80-145Z" fill="#e9b44c" opacity=".75"/><g fill="#0b2a3c"><circle cx="530" cy="173" r="7"/><circle cx="286" cy="112" r="7"/><circle cx="118" cy="82" r="7"/><circle cx="346" cy="315" r="7"/><circle cx="520" cy="338" r="7"/></g></svg>
+      <span class="map-label label-nola">New Orleans</span><span class="map-label label-metairie">Metairie</span><span class="map-label label-kenner">Kenner</span><span class="map-label label-harahan">Harahan</span><span class="map-label label-jeff">Jefferson Parish</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Reputation, shown honestly</span><h2>Verified customer experiences belong here.</h2><p>The business uses three Google profiles plus Facebook. The prototype does not fabricate excerpts; connect each approved review to its exact profile, source, and date.</p></div><span class="placeholder">Content required</span></div>
+    <div class="review-grid">
+      <article class="review"><div class="quote">“</div><p>Google review placeholder: use a verified refrigerator or cooling-service review that demonstrates communication and diagnosis.</p><div class="source-slot">Source • reviewer attribution • month/year</div></article>
+      <article class="review"><div class="quote">“</div><p>Google review placeholder: use a verified laundry-appliance review that demonstrates respectful in-home service.</p><div class="source-slot">Source • reviewer attribution • month/year</div></article>
+      <article class="review"><div class="quote">“</div><p>Facebook review placeholder: use a verified follow-up or diagnostic-coverage review that demonstrates accountability.</p><div class="source-slot">Source • reviewer attribution • month/year</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section faqs" id="faqs">
+  <div class="wrap faq-grid">
+    <div><span class="eyebrow">Before you request</span><h2>Questions customers need answered.</h2><p class="lead">The production answers must be approved by the owner and operations team.</p></div>
+    <div>
+      <details><summary>How does the service-call or diagnostic fee work?</summary><p>The diagnostic fee starts at $129 plus applicable sales tax. The exact amount varies by ZIP code because additional travel charges apply in specific areas. The confirmed total should be disclosed before the appointment is booked.</p></details>
+      <details><summary>What brands and models do you service?</summary><p>Professional Appliance Repair works on most appliance brands, including less-common brands such as ILVE, Forno, EuroChef, Verona, THOR, and NXR. Coverage still depends on the appliance, model, configuration, and parts availability, so the team confirms fit during scheduling.</p></details>
+      <details><summary>Will I receive an estimate before the repair?</summary><p>Recommended policy copy: explain that the technician diagnoses the appliance and presents the repair option before authorized work begins. Confirm the exact process before publication.</p></details>
+      <details><summary>What warranty coverage applies?</summary><p>The service-call diagnostic fee is covered for 30 days when the follow-up concerns the same appliance and the same issue. Labor is covered for 30 days for the same issue. Parts coverage is manufacturer-specific and typically ranges from 90 days to one year, depending on the manufacturer. The exact parts terms should be documented on the repair record.</p></details>
+      <details><summary>When is the office open?</summary><p>Regular business hours are Monday through Friday, 8:00 AM–4:30 PM. Appointment availability and arrival windows are confirmed during scheduling.</p></details><details><summary>What professional credentials does the company hold?</summary><p>Technicians who handle regulated refrigerants hold EPA Section 608 certification, and Professional Appliance Repair is GE Factory Authorized. Manufacturer authorization should be stated only for GE unless additional authorizations are documented.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section request" id="request">
+  <div class="wrap request-grid">
+    <div class="request-copy"><span class="eyebrow" style="color:var(--amber)">Start with the essentials</span><h2>Let’s get your kitchen or laundry moving again.</h2><p class="lead">This three-step prototype collects only the information needed to confirm fit and follow up. Diagnostic visits start at $129 plus tax and may include a ZIP-based travel charge. It does not transmit or store data.</p><ul class="checklist"><li>Appliance and symptom</li><li>ZIP code and contact preference</li><li>Optional brand, model, and extra detail</li><li>30-day labor coverage for the same issue</li><li>Manufacturer-specific parts coverage</li><li>Separate consent for marketing—not included at launch</li></ul></div>
+    <div class="form-card">
+      <form id="serviceForm" novalidate>
+        <div class="form-top"><h3>Request service</h3><span class="progress-label" id="progressLabel">Step 1 of 3</span></div><div class="progress"><span id="progressBar"></span></div><p class="error" id="formError" aria-live="assertive"></p>
+        <div class="form-step active" data-step="1"><div class="field-grid"><div class="field"><label for="appliance">Appliance *</label><select id="appliance" required><option value="">Choose one</option><option>Refrigerator</option><option>Washer</option><option>Dryer</option><option>Dishwasher</option><option>Oven or range</option><option>Ice maker</option><option>Other appliance</option></select></div><div class="field"><label for="issue">Primary issue *</label><select id="issue" required><option value="">Choose one</option><option>Not working</option><option>Not heating</option><option>Not cooling</option><option>Leaking</option><option>Making noise</option><option>Error code</option><option>Other issue</option></select></div><div class="field full"><label for="details">What is happening?</label><textarea id="details" placeholder="Briefly describe the symptom. Avoid sensitive personal information."></textarea><span class="help">Optional at this stage</span></div></div></div>
+        <div class="form-step" data-step="2"><div class="field-grid"><div class="field"><label for="zip">Service ZIP *</label><input id="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="70115" required></div><div class="field"><label for="preference">Preferred contact *</label><select id="preference" required><option value="">Choose one</option><option>Phone call</option><option>Text message</option><option>Email</option></select></div><div class="field"><label for="name">Name *</label><input id="name" autocomplete="name" required></div><div class="field"><label for="contact">Phone or email *</label><input id="contact" autocomplete="email" required></div></div><p class="consent">Prototype consent notice: submitting a production form should authorize service-related contact only. Marketing consent must be separate and optional.</p></div>
+        <div class="form-step" data-step="3"><div class="field-grid"><div class="field"><label for="brand">Brand</label><input id="brand" placeholder="e.g. Whirlpool"></div><div class="field"><label for="model">Model number</label><input id="model" placeholder="If available"></div><div class="field full"><label for="timing">Scheduling note</label><textarea id="timing" placeholder="Share general availability. This does not reserve a time."></textarea></div></div><p class="consent">By completing the production request, the customer should receive a confirmation describing what happens next and when to expect contact. No appointment is created by this prototype.</p></div>
+        <div class="form-nav"><button class="btn btn-outline" id="backBtn" type="button" hidden>← Back</button><button class="btn btn-primary" id="nextBtn" type="button">Continue →</button></div>
+      </form>
+      <div class="success-card" id="successCard" aria-live="polite"><div class="success-icon">✓</div><h3>Prototype request complete.</h3><p>No information was sent or stored. In production, this screen should display a reference number, response expectation, verified phone option, and editable summary.</p><button class="btn btn-outline" id="restartBtn" type="button">Start another test</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid">
+  <div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">Professional<br>Appliance Repair<small>GREATER NEW ORLEANS</small></span></a><p class="footer-note">Prototype positioning: clear local appliance repair from request through the repair decision. Business details require owner verification.</p></div>
+  <div><h3>Services</h3><a href="#services">Refrigerator</a><a href="#services">Washer &amp; dryer</a><a href="#services">Dishwasher</a><a href="#services">Oven &amp; range</a></div>
+  <div><h3>Company</h3><a href="#standards">Our standards</a><a href="#area">Service area</a><a href="#faqs">FAQs</a><a href="#request">Request service</a></div>
+  <div><h3>Contact</h3><a href="#request">Online request</a><a href="tel:+15044545040">504-454-5040</a><a href="#area">New Orleans &amp; surrounding areas</a><a href="#request">Mon–Fri 8:00 AM–4:30 PM</a></div>
+</div><div class="footer-bottom"><span>© Professional Appliance Repair — prototype only • 504-454-5040</span><span>EPA Section 608 certified • GE Factory Authorized • Privacy • Accessibility</span></div></div></footer>
+
+<div class="mobile-cta"><a class="btn btn-outline" href="tel:+15044545040" aria-label="Call Professional Appliance Repair at 504-454-5040">Call 504-454-5040</a><a class="btn btn-primary" href="#request">Request service</a></div>
+<div class="prototype-bar">Interactive concept • Facts require verification</div>
+<div class="dialog-backdrop" id="callDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+  <div class="dialog"><button class="dialog-close" type="button" aria-label="Close dialog">×</button><span class="eyebrow">Production dependency</span><h2 id="dialogTitle">Connect the verified business number.</h2><p>The verified business number is <a href="tel:+15044545040">504-454-5040</a>. Regular hours are Monday through Friday, 8:00 AM–4:30 PM.</p><a class="btn btn-primary" href="#request" id="dialogRequest">Use the request form</a></div>
+</div>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
