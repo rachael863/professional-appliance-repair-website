@@ -1,0 +1,13 @@
+{
+  "name": "professional-appliance-repair-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free local preview for the Professional Appliance Repair website prototype.",
+  "scripts": {
+    "dev": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
