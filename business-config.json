@@ -2,6 +2,9 @@
   "businessName": "Professional Appliance Repair",
   "phone": "504-454-5040",
   "phoneE164": "+15044545040",
+  "textPhone": "504-602-9979",
+  "textPhoneE164": "+15046029979",
+  "currentContactForm": "https://proappliancefix.com/contact/",
   "hours": "Monday–Friday, 8:00 AM–4:30 PM",
   "serviceZipCodes": [
     "70001",
@@ -56,6 +59,7 @@
     "Approved review excerpts and current counts",
     "Travel-fee amount for each applicable ZIP",
     "Final privacy and accessibility policy text",
-    "Production lead-form endpoint"
+    "Owner confirmation of prototype fee and warranty wording",
+    "Decision on production lead-form integration"
   ]
 }
