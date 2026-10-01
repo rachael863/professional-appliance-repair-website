@@ -5,7 +5,7 @@
   "textPhone": "504-602-9979",
   "textPhoneE164": "+15046029979",
   "currentContactForm": "https://proappliancefix.com/contact/",
-  "hours": "Monday–Friday, 8:00 AM–4:30 PM",
+  "hours": "Monday\u2013Friday, 8:00 AM\u20134:30 PM",
   "serviceZipCodes": [
     "70001",
     "70002",
@@ -35,10 +35,10 @@
     "70124",
     "70131"
   ],
-  "diagnosticFee": "Starts at $129 plus sales tax; ZIP-specific travel fees may apply",
-  "diagnosticCoverage": "30 days for the same appliance and same issue",
-  "laborWarranty": "30 days for the same issue",
-  "partsWarranty": "Manufacturer-specific, typically 90 days to 1 year",
+  "diagnosticFee": null,
+  "diagnosticCoverage": null,
+  "laborWarranty": null,
+  "partsWarranty": null,
   "credentials": [
     "EPA Section 608-certified technicians",
     "GE Factory Authorized"
@@ -52,7 +52,7 @@
     "NXR"
   ],
   "reviewSources": [
-    "Google — 3 profiles",
+    "Google \u2014 3 profiles",
     "Facebook"
   ],
   "remainingContent": [
@@ -61,5 +61,6 @@
     "Final privacy and accessibility policy text",
     "Owner confirmation of prototype fee and warranty wording",
     "Decision on production lead-form integration"
-  ]
+  ],
+  "pricingStatus": "Diagnostic amount, travel charges, credit policy, and coverage require owner confirmation before publication."
 }
