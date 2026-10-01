@@ -29,6 +29,7 @@ button{cursor:pointer}
 .brand-text{font-size:16px}
 .brand-text small{display:block;font-size:10px;letter-spacing:.14em;color:var(--teal);margin-top:5px}
 .nav-links{display:flex;align-items:center;gap:25px}
+.nav-links .actions{display:none}
 .nav-links a{text-decoration:none;font-size:14px;font-weight:750}
 .nav-links a:not(.btn):hover{text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:6px}
 .actions{display:flex;gap:10px;align-items:center}
@@ -52,6 +53,7 @@ h3{letter-spacing:-.025em;line-height:1.16}
 .lead{font-size:19px;color:#3d5967;max-width:610px;margin-bottom:28px}
 .hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .reassure{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-top:18px}
+.reassure{max-width:610px}
 .reassure svg{width:17px;color:var(--teal)}
 .hero-visual{position:relative;min-height:506px}
 .scene{position:absolute;inset:0;border-radius:34px;overflow:hidden;background:linear-gradient(145deg,#e3efec,#fff7e7);box-shadow:var(--shadow);border:1px solid rgba(11,42,60,.12)}
@@ -78,6 +80,10 @@ h3{letter-spacing:-.025em;line-height:1.16}
 .mini-field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:850}
 .mini-field select,.mini-field input{width:100%;border:1px solid #c6d0d2;border-radius:10px;padding:11px;background:white;color:var(--navy)}
 .intake .btn{width:100%;margin-top:7px}
+.hero-card{top:auto;bottom:28px;width:278px}
+.hero-card p{font-size:14px;color:var(--muted);margin:0 0 14px}
+.text-link{font-weight:850;color:var(--teal);text-decoration:none}
+.text-link:hover{text-decoration:underline}
 .proof{background:white;border-block:1px solid rgba(11,42,60,.1)}
 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .proof-item{padding:22px 18px;display:flex;gap:14px;align-items:flex-start;border-right:1px solid var(--line)}
@@ -91,7 +97,7 @@ h3{letter-spacing:-.025em;line-height:1.16}
 .section-head p{max-width:600px;color:var(--muted);margin:0}
 .services{background:var(--ivory)}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.service-card{border:1px solid rgba(11,42,60,.13);background:var(--paper);border-radius:20px;padding:24px;text-align:left;color:var(--navy);min-height:208px;position:relative;overflow:hidden;transition:.22s ease}
+.service-card{display:block;text-decoration:none;border:1px solid rgba(11,42,60,.13);background:var(--paper);border-radius:20px;padding:24px;text-align:left;color:var(--navy);min-height:208px;position:relative;overflow:hidden;transition:.22s ease}
 .service-card:hover{transform:translateY(-5px);box-shadow:var(--soft);border-color:rgba(14,107,104,.5)}
 .service-icon{width:60px;height:60px;border-radius:18px;background:var(--pale);display:grid;place-items:center;margin-bottom:26px;color:var(--teal)}
 .service-icon svg{width:32px}
@@ -133,6 +139,8 @@ h3{letter-spacing:-.025em;line-height:1.16}
 .zip-row{display:flex;gap:10px}
 .zip-row input{flex:1;min-width:0;border:1px solid #b9c7ca;border-radius:12px;padding:13px 15px}
 .status{font-size:13px;margin:12px 0 0;min-height:21px;color:var(--muted)}
+.status-success{color:var(--success)}
+.status-error{color:#a33320}
 .map{min-height:400px;border-radius:30px;position:relative;overflow:hidden;background:#fff9ef;border:1px solid rgba(11,42,60,.12)}
 .map svg{position:absolute;inset:0;width:100%;height:100%}
 .map-label{position:absolute;background:white;border:1px solid #bac9cc;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:850;box-shadow:0 5px 15px rgba(11,42,60,.08)}
@@ -147,6 +155,12 @@ h3{letter-spacing:-.025em;line-height:1.16}
 .review p{font-size:15px;color:#435c68}
 .source-slot{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:22px}
 .placeholder{display:inline-block;background:#fff0ec;color:#9c321f;border:1px solid #f0b5a9;border-radius:99px;padding:4px 8px;font-size:9px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.decision{background:white}
+.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.decision-card{padding:28px;border:1px solid var(--line);background:var(--paper);border-radius:20px}
+.decision-number{display:inline-block;color:var(--teal);font-size:13px;letter-spacing:.14em;font-weight:900;margin-bottom:24px}
+.decision-card h3{font-size:22px;margin-bottom:10px}
+.decision-card p{color:var(--muted);font-size:15px;margin:0}
 .faqs{background:var(--ivory)}
 .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}
 details{background:white;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
@@ -161,6 +175,15 @@ details p{padding:0 20px 20px;color:var(--muted);font-size:14px;margin:0}
 .request-copy p{color:#cbdbe0}
 .checklist{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px;color:#deeaed;font-size:14px}
 .checklist li{display:flex;gap:10px}.checklist li::before{content:"✓";color:var(--amber);font-weight:900}
+.contact-card{background:white;color:var(--ink);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.contact-card h3{font-size:30px;margin:8px 0 22px}
+.contact-option{display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;transition:.2s ease}
+.contact-option:hover{border-color:var(--teal);background:var(--pale);transform:translateY(-2px)}
+.contact-option strong,.contact-option small{display:block}
+.contact-option strong{font-size:16px;color:var(--navy)}
+.contact-option small{color:var(--muted);margin-top:3px}
+.contact-option>span:last-child{font-size:23px;color:var(--teal)}
+.contact-hours{font-size:13px;color:var(--muted);margin:20px 0 0}
 .form-card{background:white;color:var(--ink);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
 .form-top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
 .form-top h3{font-size:24px;margin:0}
@@ -214,11 +237,11 @@ details p{padding:0 20px 20px;color:var(--muted);font-size:14px;margin:0}
   .tech{transform:scale(.72);transform-origin:left bottom;left:25px}.fridge{right:22px;transform:scale(.85);transform-origin:right bottom}
   .proof-grid{grid-template-columns:1fr}.proof-item{border-right:0!important;border-bottom:1px solid var(--line)!important}.proof-item:last-child{border-bottom:0!important}
   .section{padding:76px 0}.section-head{display:block;margin-bottom:28px}.section-head .btn{margin-top:12px}
-  .service-grid{grid-template-columns:1fr 1fr}.service-card{min-height:190px;padding:18px}.service-card h3{font-size:17px}.service-card p{display:none}
+  .service-grid{grid-template-columns:1fr 1fr}.service-card{min-height:214px;padding:18px}.service-card h3{font-size:17px}.service-card p{display:block;font-size:13px;padding-bottom:28px}
   .steps{grid-template-columns:1fr}.step{display:grid;grid-template-columns:48px 1fr;column-gap:14px;padding:0}.step::before{grid-row:1/3}.step:not(:last-child)::after{display:none}
   .trust-grid{gap:38px}.home-card{min-height:420px}.washer{transform:scale(.72);transform-origin:left bottom;left:18px}.person{transform:scale(.72);transform-origin:right bottom;right:5px}
-  .map{min-height:320px}.review-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr;gap:25px}
-  .request-grid{gap:35px}.form-card{padding:22px}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+  .map{min-height:320px}.review-grid,.decision-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr;gap:25px}
+  .request-grid{gap:35px}.contact-card{padding:22px}
   .footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.footer-grid>div:last-child{grid-column:auto}.footer-bottom{display:block;padding-bottom:70px}
   .mobile-cta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:8px;right:8px;bottom:8px;z-index:210;background:rgba(255,255,255,.96);padding:8px;border-radius:16px;box-shadow:0 12px 35px rgba(11,42,60,.23);backdrop-filter:blur(10px)}
   .mobile-cta .btn{min-height:48px;padding:10px}.prototype-bar{display:none}
