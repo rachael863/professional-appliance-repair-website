@@ -1,5 +1,9 @@
 # Professional Appliance Repair — concept 2
 
+## Revision: positioning and pricing
+
+The September 30, 2026 revision keeps the single-task, phone-first structure and the real service-contact routes. It refines the visual language into a custom service record: a first-contact sheet in the hero and a pricing record near the repair-decision section. Warm paper, ink blue, restrained sage, Iowan Old Style and Avenir Next make the page calmer and more personal while avoiding generated staff photos. The copy now foregrounds the business's published practice of explaining estimates before repair. Pricing is presented in two stages—visit charge confirmed before booking, repair estimate after diagnosis—with no unverified dollar amount or credit promise. See [the positioning and pricing record](../POSITIONING-PRICING.md) for primary sources and owner decisions.
+
 This is a second, independent design concept at `/concept-v2/`. It preserves the existing prototype at the repository root for comparison. The attached *Website Design Concept Prompt 2* supplied the design method; known company facts came from the [current business website](https://proappliancefix.com/) and its [contact page](https://proappliancefix.com/contact/).
 
 ## 0. Gaps and assumptions
