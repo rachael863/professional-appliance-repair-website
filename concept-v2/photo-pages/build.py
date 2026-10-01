@@ -13,23 +13,27 @@ PAGES = {
         "badge": "PAR field photo · enhanced", "number": "01", "accent": "mint",
         "issues": ["Cooling concerns", "Leaks and moisture", "Ice maker issues", "Unusual sounds"],
         "section_title": "A close look at the details that matter.",
-        "section_copy": "The service story starts with careful observation, a clear explanation, and a practical path forward. The image shows a real visit; the exact work shown should not be taken as a diagnosis for every appliance.",
-        "secondary": "../concepts/chatgpt-refrigerator-diagnosis.jpg", "secondary_alt": "Illustration of a technician inspecting a refrigerator",
-        "secondary_badge": "Illustrative concept image", "secondary_title": "A considered diagnostic experience",
+        "section_copy": "The service story starts with careful observation, a clear explanation, and a practical path forward. This second field image shows access to a built-in refrigerator; it does not establish a diagnosis or repair outcome.",
+        "secondary": "../enhanced/archive/refrigerator-access.jpg", "secondary_alt": "Built-in refrigerator pulled forward for service access",
+        "secondary_badge": "PAR field photo · enhanced", "secondary_title": "Built-in service access",
+        "extras": [
+            ("../enhanced/archive/built-in-refrigerator.jpg", "Built-in refrigerator in a residential kitchen", "PAR appliance photo · enhanced", "Built-in refrigerator context"),
+            ("../enhanced/archive/freezer-frost.jpg", "Frost visible inside a freezer", "PAR field detail · enhanced", "Freezer frost detail"),
+        ],
         "faqs": [("What information helps before a visit?", "The appliance brand and model, the symptoms you have noticed, and when the issue began are useful starting points."),
                  ("Can you look at built-in refrigerators?", "This concept page includes built-in refrigerator service. Confirm current model coverage with PAR before publishing specific service promises.")],
     },
     "washer": {
         "nav": "Washers", "eyebrow": "Washer service", "title": "Get laundry back on track.",
         "lede": "A washer that will not drain, spin, or finish a cycle can interrupt the whole day. Make the next step simple.",
-        "image": "../concepts/chatgpt-stacked-laundry.jpg", "alt": "Illustrative scene of a technician examining stacked laundry appliances",
-        "badge": "Illustrative concept image", "number": "02", "accent": "sand",
+        "image": "../enhanced/archive/washer-technician.jpg", "alt": "Technician servicing an open stacked washer in a laundry room",
+        "badge": "PAR field photo · enhanced", "number": "02", "accent": "sand",
         "issues": ["Drainage issues", "Spin and agitation", "Leaks", "Cycle interruptions"],
         "section_title": "An organized visit, from first look to next steps.",
-        "section_copy": "Use this page to explain how PAR approaches the problem and what customers can prepare. A real PAR washer service photograph would strengthen this page before launch.",
+        "section_copy": "This real field photograph shows hands-on washer service and gives customers a clearer view of the visit. The page explains how to prepare and what details help a technician understand the concern.",
         "secondary": None, "secondary_alt": "", "secondary_badge": "", "secondary_title": "",
         "faqs": [("What should I note before requesting service?", "Record any error code, the cycle where the problem happens, and whether water remains in the drum."),
-                 ("Does this image show a PAR visit?", "No. The washer image is a generated visual used for this design concept.")],
+                 ("Does this image show a PAR visit?", "The washer image is an AI-enhanced field service photograph from PAR's content archive. Confirm the photo release before production use.")],
     },
     "dryer": {
         "nav": "Dryers", "eyebrow": "Dryer service", "title": "Make room for a better laundry day.",
@@ -39,10 +43,10 @@ PAGES = {
         "issues": ["No heat", "Long dry times", "Unusual sounds", "Start and control issues"],
         "section_title": "Real service work, shown clearly.",
         "section_copy": "This photo captures a PAR technician working on stacked laundry equipment. It gives the page a credible view of the visit without making a promise about any specific repair outcome.",
-        "secondary": "../concepts/chatgpt-dryer-airflow.jpg", "secondary_alt": "Illustration of a technician checking dryer airflow",
-        "secondary_badge": "Illustrative concept image", "secondary_title": "Attention to airflow and performance",
+        "secondary": "../enhanced/archive/dryer-airflow.jpg", "secondary_alt": "Lint accumulation visible on a dryer blower wheel during inspection",
+        "secondary_badge": "PAR field detail · enhanced", "secondary_title": "A closer look at airflow",
         "faqs": [("What details should I share?", "Tell PAR what the dryer does, whether it heats, and about any sound, smell, or message you have noticed."),
-                 ("Is this a real PAR service photo?", "The main dryer image is an edited real field photo. The smaller airflow image is an illustration.")],
+                 ("Is this a real PAR service photo?", "Both dryer images began as real field photos and were enhanced for this visual concept. The blower photo is an inspection detail, not a diagnosis for every dryer.")],
     },
     "dishwasher": {
         "nav": "Dishwashers", "eyebrow": "Dishwasher service", "title": "A smoother rhythm for the kitchen.",
@@ -51,8 +55,9 @@ PAGES = {
         "badge": "Illustrative concept image", "number": "04", "accent": "sand",
         "issues": ["Water not draining", "Leaks", "Cleaning performance", "Cycle and control issues"],
         "section_title": "Built around what customers need to know.",
-        "section_copy": "A good service page helps people describe the symptom and prepare for the visit. The current visual is illustrative; an authentic PAR dishwasher photograph remains a priority for the finished site.",
-        "secondary": None, "secondary_alt": "", "secondary_badge": "", "secondary_title": "",
+        "section_copy": "A good service page helps people describe the symptom and prepare for the visit. The hero is illustrative. The field detail shows an electrical connection under inspection; it should not be read as the cause of every dishwasher concern.",
+        "secondary": "../enhanced/archive/dishwasher-electrical.jpg", "secondary_alt": "Close view of an electrical connection inside a dishwasher during service inspection",
+        "secondary_badge": "PAR field detail · enhanced", "secondary_title": "A real diagnostic detail",
         "faqs": [("What information is useful before service?", "Share the model if available, where you see water, and whether the cycle completes."),
                  ("Is the technician pictured a PAR employee?", "No. This is a generated concept image, not a photograph of a PAR employee or job.")],
     },
@@ -64,7 +69,9 @@ PAGES = {
         "issues": ["Heating concerns", "Control issues", "Door and fit problems", "Uneven cooking"],
         "section_title": "A real look at built-in appliance service.",
         "section_copy": "The edited photo shows an oven removed for access on a service cart. It is useful for explaining the care involved in a visit, while leaving exact technical claims to the service team.",
-        "secondary": None, "secondary_alt": "", "secondary_badge": "", "secondary_title": "",
+        "secondary": "../enhanced/archive/range.jpg", "secondary_alt": "Stainless steel range in a residential kitchen",
+        "secondary_badge": "PAR appliance photo · enhanced", "secondary_title": "Range service, in context",
+        "extras": [("../enhanced/archive/oven-service-cart.jpg", "Built-in oven on a wheeled service cart during access", "PAR field photo · enhanced", "Oven service access")],
         "faqs": [("What should I share when requesting service?", "Note the model, any error message, and whether the concern affects the oven, cooktop, or both."),
                  ("Does the photo show a real service visit?", "Yes. The main oven image began as a real uploaded service photo and was enhanced for this concept.")],
     },
@@ -75,8 +82,9 @@ PAGES = {
         "badge": "Real appliance photo · enhanced", "number": "06", "accent": "ice",
         "issues": ["Low ice production", "Leaks", "Cleaning concerns", "Unusual sounds"],
         "section_title": "Show the appliance, then explain the visit.",
-        "section_copy": "This genuine appliance photo makes the category recognizable. It does not show a technician or document a repair result. A current field-service image would add more credibility here.",
-        "secondary": None, "secondary_alt": "", "secondary_badge": "", "secondary_title": "",
+        "section_copy": "The hero makes the category recognizable. The field detail shows an open ice machine and provides a real look inside, without implying a particular diagnosis or completed repair.",
+        "secondary": "../enhanced/archive/ice-machine-open.jpg", "secondary_alt": "Open ice machine with internal components visible during inspection",
+        "secondary_badge": "PAR field detail · enhanced", "secondary_title": "An inside view of the appliance",
         "faqs": [("What should I note before a visit?", "Share whether the machine is producing ice, whether water is collecting, and any lights or messages you see."),
                  ("Does the image show a completed repair?", "No. It is a real photo of an ice machine, edited for the visual concept.")],
     },
@@ -132,13 +140,15 @@ def detail(slug, page):
     issues = ''.join(f'<li><span aria-hidden="true">↗</span>{escape(issue)}</li>' for issue in page['issues'])
     photo = image(page['image'], page['alt'], page['badge'], 'detail-hero-photo')
     secondary = (f'<div class="feature-photo">{image(page["secondary"], page["secondary_alt"], page["secondary_badge"])}<strong>{escape(page["secondary_title"])}</strong></div>' if page['secondary'] else '<div class="feature-symbol" aria-hidden="true"><span>PAR.</span><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>')
+    extras = page.get('extras', [])
+    gallery = ('<section class="field-gallery"><div class="section-heading"><div><span class="eyebrow">More from the archive</span><h2>A closer look.</h2></div><p>Enhanced field images provide visual context; the original photos remain the reference for technical details.</p></div><div class="field-gallery-grid">' + ''.join('<div class="field-gallery-item">' + image(path, alt, badge) + '<strong>' + escape(label) + '</strong></div>' for path, alt, badge, label in extras) + '</div></section>') if extras else ''
     faqs = ''.join(f'<details><summary>{escape(q)}<span aria-hidden="true">+</span></summary><p>{escape(a)}</p></details>' for q, a in page['faqs'])
     related = [s for s in PAGES if s != slug][:3]
     related_cards = ''.join(service_card(s, PAGES[s]) for s in related)
     content = f'''<div class="breadcrumbs"><a href="index.html">Home</a><span>/</span>{escape(page['nav'])}</div>
     <section class="detail-hero accent-{page['accent']}"><div class="detail-hero-copy"><span class="eyebrow">{escape(page['eyebrow'])} <b>—</b> {page['number']} / 06</span><h1>{escape(page['title'])}</h1><p>{escape(page['lede'])}</p><div class="hero-actions"><a class="button primary" href="#request">Request service <span aria-hidden="true">↗</span></a><a class="text-link" href="#common">What we look at <span aria-hidden="true">↘</span></a></div></div>{photo}</section>
     <section class="issue-section" id="common"><div><span class="eyebrow">Common concerns</span><h2>Tell us what you’re noticing.</h2><p>These are useful starting points for a service conversation, not a diagnosis.</p></div><ul>{issues}</ul></section>
-    <section class="feature-section"><div class="feature-copy"><span class="eyebrow">The service experience</span><h2>{escape(page['section_title'])}</h2><p>{escape(page['section_copy'])}</p><a class="text-link dark" href="#request">Start a request <span aria-hidden="true">↗</span></a></div>{secondary}</section>
+    <section class="feature-section"><div class="feature-copy"><span class="eyebrow">The service experience</span><h2>{escape(page['section_title'])}</h2><p>{escape(page['section_copy'])}</p><a class="text-link dark" href="#request">Start a request <span aria-hidden="true">↗</span></a></div>{secondary}</section>{gallery}
     <section class="process-section"><div class="section-heading"><div><span class="eyebrow">A simple path</span><h2>What happens next.</h2></div><p>Use a calm, clear sequence to help customers prepare for a service visit.</p></div><div class="process-grid"><article><span>01</span><h3>Share the concern</h3><p>Tell PAR which appliance needs attention and what you have noticed.</p></article><article><span>02</span><h3>Prepare the details</h3><p>Have the brand, model, and any error message ready if available.</p></article><article><span>03</span><h3>Discuss the next step</h3><p>Use the visit to understand the issue and the recommended path forward.</p></article></div></section>
     <section class="faq-section"><div><span class="eyebrow">Helpful to know</span><h2>A little clarity before the visit.</h2></div><div class="faq-list">{faqs}</div></section>
     {request({'refrigerator': 'refrigerator', 'washer': 'washer', 'dryer': 'dryer', 'dishwasher': 'dishwasher', 'oven-range': 'oven or range', 'ice-machine': 'ice machine'}[slug])}

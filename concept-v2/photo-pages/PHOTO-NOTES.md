@@ -1,14 +1,17 @@
-# Photo-led landing page concept: image notes
+# PAR photo concept: source and usage notes
 
-These seven pages are a visual review of image placement. They are not the production booking flow. The form on each page demonstrates the layout and does not transmit customer information.
+This seven-page concept uses selected images from Apple Photos, ChatGPT Images, and the shared PAR Appliance Repair Content archive. It is a visual review, not a production booking flow. Forms do not transmit customer information.
 
-| Page | Main image | Source and status |
+| Page | Hero | Supporting visuals |
 | --- | --- | --- |
-| Homepage and dryer | Technician working on a stacked dryer | PAR field photo, April 8, 2026; enhanced for light, composition, and color |
-| Refrigerator | Technician at a built-in refrigerator | PAR field photo, May 14, 2025; enhanced and background customer removed |
-| Oven and range | Built-in oven on a service cart | Real image from the user's ChatGPT image library; enhanced |
-| Ice machine | Open clear-ice machine | Apple Photos image, August 4, 2023; enhanced; does not depict a repair result |
-| Washer | Stacked laundry service scene | Generated illustration from ChatGPT Images, not a PAR employee or job |
-| Dishwasher | Dishwasher service scene | Generated illustration from ChatGPT Images, not a PAR employee or job |
+| Home | PAR dryer service field photo | PAR refrigerator and oven service field photos; appliance cards |
+| Refrigerator | PAR built-in refrigerator service field photo | Refrigerator pulled out for access; built-in refrigerator; freezer frost detail |
+| Washer | PAR washer technician field photo | None |
+| Dryer | PAR dryer service field photo | Dryer blower wheel with lint accumulation |
+| Dishwasher | Generated illustrative service scene | PAR dishwasher electrical connection inspection detail |
+| Oven and range | PAR built-in oven service field photo | Residential range; built-in oven on service cart |
+| Ice machine | Real ice-machine appliance photo | Open ice machine inspection detail |
 
-Supporting generated illustrations appear on the refrigerator and dryer pages and are labeled in place. Before using any image on a production site, verify commercial permission for photos taken in customer homes and compare small equipment or brand text in the enhanced images with the originals. The refrigerator sticker and ice-machine control text in the edited images are not reliable readable copy.
+All field photos and appliance photos used here have been AI enhanced for light, color, composition, or cleanup. The local archive photo plan maps the nine new edits to their original file IDs and explains other possible uses. AI enhancement can alter small labels and mechanical details. Use the original files when making technical, equipment, or repair claims. The dishwasher hero is generated and labeled as illustrative; it does not show a PAR employee or documented job.
+
+Before production use, verify commercial permission for customer-home photos and any pictured technician, and confirm that no identifying information is visible. The separately labeled privacy-concern folder was excluded from selection.
