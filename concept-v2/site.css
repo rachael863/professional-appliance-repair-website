@@ -1,4 +1,4 @@
-:root{--ink:#173548;--ink-soft:#365267;--blue:#164f73;--cream:#f8f6f0;--paper:#fffefb;--line:#d9dfdc;--sage:#748460;--sage-pale:#edf0e7;--max:1200px}
+:root{--ink:#173548;--ink-soft:#365267;--blue:#164f73;--cream:#f8f6f0;--paper:#fffefb;--line:#d9dfdc;--sage:#596b4c;--sage-pale:#edf0e7;--max:1200px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 "Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
