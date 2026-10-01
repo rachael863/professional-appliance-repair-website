@@ -26,7 +26,7 @@ PAGES = {
     "washer": {
         "nav": "Washers", "eyebrow": "Washer service", "title": "Get laundry back on track.",
         "lede": "A washer that will not drain, spin, or finish a cycle can interrupt the whole day. Make the next step simple.",
-        "image": "../enhanced/archive/washer-technician.jpg", "alt": "Technician servicing an open stacked washer in a laundry room",
+        "image": "../enhanced/archive/washer-technician.jpg?v=2", "alt": "Technician servicing an open stacked washer in a laundry room",
         "badge": "PAR field photo · enhanced", "number": "02", "accent": "sand",
         "issues": ["Drainage issues", "Spin and agitation", "Leaks", "Cycle interruptions"],
         "section_title": "An organized visit, from first look to next steps.",
