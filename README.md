@@ -5,9 +5,9 @@ This repository contains the complete source of the **one-page website prototype
 ## Compare the two concepts
 
 - [Concept 1 — editorial, photography-led](https://rachael863.github.io/professional-appliance-repair-website/) is the root website.
-- [Concept 2 — phone-first service path](https://rachael863.github.io/professional-appliance-repair-website/concept-v2/) is a separate, image-free direction in `concept-v2/`. Its [design brief](concept-v2/DESIGN-BRIEF.md) records customer assumptions, the local landscape scan, design choices, content structure, and review checks.
+- [Concept 2 — considered, phone-first service path](https://rachael863.github.io/professional-appliance-repair-website/concept-v2/) is a separate, image-free direction in `concept-v2/`. Its [design brief](concept-v2/DESIGN-BRIEF.md) records customer assumptions and design choices. [Positioning and pricing research](POSITIONING-PRICING.md) explains the proposed two-stage price presentation and source checks.
 
-Both pages are design concepts. Concept 2 omits fee and warranty amounts that still need business confirmation.
+Both pages are design concepts. Neither publishes fee or warranty amounts that still need business confirmation.
 
 ## Files
 
