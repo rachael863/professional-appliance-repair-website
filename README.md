@@ -1,6 +1,6 @@
 # Professional Appliance Repair website source
 
-This repository contains the complete source of the **one-page website prototype** for Professional Appliance Repair in Greater New Orleans. The page's illustrations and icons are CSS and inline SVG, so no external image files or image services are required.
+This repository contains the complete source of the **one-page website prototype** for Professional Appliance Repair in Greater New Orleans. All imagery is hosted in the repository; the page has no external image dependency.
 
 ## Files
 
@@ -8,6 +8,8 @@ This repository contains the complete source of the **one-page website prototype
 - `assets/site.css` — responsive layout and artwork
 - `assets/site.js` — mobile menu and browser-only ZIP checker
 - `assets/favicon.svg` — site icon
+- `assets/new-orleans-appliance-service.jpg` and `assets/washer-consultation.jpg` — generated concept photography, depicting no actual staff or customers
+- `BRAND-CONCEPT.md` — visual and copy direction for the premium, family-owned concept
 - `business-config.json` — business details and items requiring confirmation
 - `server.mjs` and `package.json` — dependency-free local preview
 - `DEPLOYMENT.md` — static hosting instructions
