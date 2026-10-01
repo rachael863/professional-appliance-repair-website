@@ -17,7 +17,7 @@
       <a class="wordmark" href="#top" aria-label="Professional Appliance Repair, back to top"><strong>PROFESSIONAL</strong><span>APPLIANCE REPAIR</span></a>
       <nav class="desktop-nav" aria-label="Primary navigation"><a href="#appliances">Appliances</a><a href="#area">Service area</a><a href="#visit">Your visit</a><a href="#questions">Questions</a></nav>
       <a class="header-call" href="tel:+15044545040">Call <strong>504-454-5040</strong><span aria-hidden="true">↗</span></a>
-      <details class="mobile-nav"><summary aria-label="Open navigation">Menu <span aria-hidden="true">＋</span></summary><nav aria-label="Mobile navigation"><a href="#appliances">Appliances</a><a href="#area">Service area</a><a href="#visit">Your visit</a><a href="#questions">Questions</a><a href="https://proappliancefix.com/contact/">Request online</a></nav></details>
+      <details class="mobile-nav"><summary aria-label="Menu">Menu <span aria-hidden="true">＋</span></summary><nav aria-label="Mobile navigation"><a href="#appliances">Appliances</a><a href="#area">Service area</a><a href="#visit">Your visit</a><a href="#questions">Questions</a><a href="https://proappliancefix.com/contact/">Request online</a></nav></details>
     </div>
   </header>
 
@@ -70,5 +70,6 @@
 
   <footer class="footer"><div class="shell footer-main"><div><a class="wordmark footer-wordmark" href="#top"><strong>PROFESSIONAL</strong><span>APPLIANCE REPAIR</span></a><p>Family-owned appliance repair in the New Orleans area.</p></div><div><strong>Explore</strong><a href="#appliances">Appliances</a><a href="#area">Service area</a><a href="#visit">Your visit</a><a href="#questions">Questions</a></div><div><strong>Contact</strong><a href="tel:+15044545040">Call 504-454-5040</a><a href="sms:+15046029979">Text 504-602-9979</a><a href="https://proappliancefix.com/contact/">Current request form</a><a href="https://proappliancefix.com/privacy-policy/">Privacy policy</a></div></div><div class="shell footer-bottom"><span>© Professional Appliance Repair · Design concept</span><span>Business details and service availability are confirmed by the office.</span></div></footer>
   <div class="mobile-actions" aria-label="Quick contact"><a href="tel:+15044545040">Call the office</a><a href="sms:+15046029979">Text us</a></div>
+  <script>document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => { document.querySelector('.mobile-nav').open = false; }));</script>
 </body>
 </html>
