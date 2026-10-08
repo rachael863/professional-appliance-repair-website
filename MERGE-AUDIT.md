@@ -1,24 +1,21 @@
 # Unified website merge audit
 
-## Existing versions identified
+## Revised decision
 
-1. **Concept 1 — editorial/photo-led root site.** Strongest local warmth, premium trust and narrative presentation.
-2. **Concept 2 — phone-first service path.** Strongest first-screen clarity, mobile conversion hierarchy and low-friction call/request actions.
-3. **Concept 2 photo-page collection.** Strongest appliance-specific landing-page architecture and internal SEO foundation.
-4. **Image iterations.** Base concept images, enhanced images and an archive of earlier edits. These are asset generations, not separate websites.
-5. **Positioning/design documents and commit revisions.** Research and refinements, not independently publishable site versions.
+After review of https://professional-appliance-repair-preview-ry.netlify.app/, that build is the strongest primary foundation.
 
-## Selected combination
+The current `codex/unified-site` implementation is an interim repository-native consolidation created before the Netlify build was supplied. It remains useful as a verified-facts, sitemap and component reference, but it should not replace the Netlify design system.
 
-- Concept 1 supplies the premium New Orleans visual tone, photography, typography and homeowner-centered voice.
-- Concept 2 supplies the direct hero hierarchy, phone-first action pattern, fee clarity and mobile behavior.
-- Photo pages supply the six service landing pages and their search-intent structure.
-- Confirmed owner facts replace earlier placeholder or unverified fee/warranty language.
+## Final direction
 
-## New public architecture
+- Start from the Netlify source.
+- Add verified owner data from `business-config.json`.
+- Add the repository ZIP checker, separate appliance URLs, FAQ depth and mobile call dock.
+- Preserve current production URLs with redirects.
+- Do not publish preview-only claims until the owner confirms them.
 
-Home; Services; six appliance pages; Brands; Service Area; Warranty; About; Reviews; FAQs; Request Service; Privacy; Accessibility.
+See [CONCEPT-COMPARISON.md](CONCEPT-COMPARISON.md).
 
-## Production dependencies
+## Required source
 
-See `business-config.json`. The branch remains noindex until those items and final QA are complete.
+Provide the repository or source ZIP used to deploy the Netlify preview. The deployed pages can be audited publicly, but the maintainable source is required for a clean merge.
