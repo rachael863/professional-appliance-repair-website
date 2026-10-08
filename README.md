@@ -1,40 +1,28 @@
-# Professional Appliance Repair website source
+# Professional Appliance Repair — unified website prototype
 
-This repository contains the complete source of the **one-page website prototype** for Professional Appliance Repair in Greater New Orleans. All imagery is hosted in the repository; the page has no external image dependency.
+This branch merges the strongest parts of the three existing design systems into one responsive static website:
 
-## Compare the two concepts
-
-- [Concept 1 — editorial, photography-led](https://rachael863.github.io/professional-appliance-repair-website/) is the root website.
-- [Concept 2 — considered, phone-first service path](https://rachael863.github.io/professional-appliance-repair-website/concept-v2/) is a separate, image-free direction in `concept-v2/`. Its [design brief](concept-v2/DESIGN-BRIEF.md) records customer assumptions and design choices. [Positioning and pricing research](POSITIONING-PRICING.md) explains the proposed two-stage price presentation and source checks.
-
-Both pages are design concepts. Neither publishes fee or warranty amounts that still need business confirmation.
-
-## Files
-
-- `index.html` — all website sections, contact links, and ZIP checker markup
-- `assets/site.css` — responsive layout and artwork
-- `assets/site.js` — mobile menu and browser-only ZIP checker
-- `assets/favicon.svg` — site icon
-- `assets/new-orleans-appliance-service.jpg` and `assets/washer-consultation.jpg` — generated concept photography, depicting no actual staff or customers
-- `BRAND-CONCEPT.md` — visual and copy direction for the premium, family-owned concept
-- `business-config.json` — business details and items requiring confirmation
-- `server.mjs` and `package.json` — dependency-free local preview
-- `DEPLOYMENT.md` — static hosting instructions
-- `DESIGN-RESEARCH.md` — sampled home-service website patterns, sources, and changes
-- `.nojekyll` — GitHub Pages compatibility
+- premium local visual identity from Concept 1;
+- phone-first conversion hierarchy from Concept 2;
+- appliance-specific landing pages from the photo-page collection.
 
 ## Preview locally
 
-Install Node.js 18 or newer, then run:
-
-```sh
+```bash
 npm run dev
 ```
 
-Open http://localhost:4173. There is no install step and no build step.
+Open http://localhost:4173.
 
-## Current scope
+## Important status
 
-This is a **design prototype** on GitHub Pages. Its call and text links use the phone numbers on the existing Professional Appliance Repair website. Its online-request link opens that site's current contact page. The prototype itself collects or stores no service-request information.
+All new pages include `noindex, nofollow` while the site is in review. Before production launch:
 
-The prototype has a `noindex` directive to avoid competing with the current business website in search. Remove it only when moving the design to the approved production domain. Confirm the ZIP-specific travel fees, service policies, and all business claims before that move. See `business-config.json` and `DEPLOYMENT.md`.
+1. connect an approved lead form or CRM;
+2. add verified Google/Facebook profile links and approved excerpts;
+3. approve the final travel-fee schedule and policy language;
+4. confirm rights and production use of all concept/enhanced imagery;
+5. complete accessibility, device and browser QA;
+6. remove the robots noindex directive.
+
+See [MERGE-AUDIT.md](MERGE-AUDIT.md) and [business-config.json](business-config.json).
