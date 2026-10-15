@@ -86,7 +86,7 @@ if (form) {
     const control = form.elements.namedItem(name);
     if (control && params.get(name)) control.value = params.get(name);
   }
-  form.querySelector("[data-fee-zip]")?.dispatchEvent(new Event("blur"));
+  if (params.get("zip")) form.querySelector("[data-fee-zip]")?.dispatchEvent(new Event("blur"));
   let started = false;
   form.addEventListener("input", () => { if (!started) { started = true; track("request_start", { source_path: location.pathname }); } }, { once: true });
   form.addEventListener("submit", async event => {
