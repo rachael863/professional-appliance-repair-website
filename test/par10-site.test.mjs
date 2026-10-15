@@ -30,8 +30,8 @@ test("request form is Netlify-detectable and confirms only an accepted request",
   assert.match(html, /action="\/request-received\/"/);
   assert.match(html, /netlify-honeypot="company"/);
   assert.doesNotMatch(html, /novalidate/);
-  assert.match(html, /site\.js\?v=par12-rc1/);
-  assert.match(html, /site\.css\?v=par12-rc1/);
+  assert.match(html, /site\.js\?v=par12-rc2/);
+  assert.match(html, /site\.css\?v=par12-rc2/);
   assert.match(html, /class="wide check"><input[^>]+><span>/);
   const js = await readFile(join(site, "assets", "site.js"), "utf8");
   assert.match(js, /event\.preventDefault\(\)/);
