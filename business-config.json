@@ -47,11 +47,11 @@
   "policyProposal": {
     "fee": "The service-call fee is shown after the customer enters a listed service ZIP. Fees are shown before tax; applicable tax is added. Parking costs are added to the service-call fee if incurred.",
     "credit": "The service-call fee is credited once toward the approved repair for the same appliance when the repair is approved within 30 days. Return diagnosis for the same appliance and original problem during that 30-day period does not require another service-call fee.",
-    "travel": "Travel is included in the quoted service-call amount; do not add a separate travel surcharge.",
-    "cancellation": "Cancellation notice received at least 24 hours before the beginning of the appointment arrival window qualifies for refund of the prepaid service-call fee. For late cancellation or no access, retain that fee, allow documented exceptions, and add no extra penalty. Eligible refunds are initiated to the original payment method within five business days.",
+    "travel": "Travel is included in the quoted service-call amount. There is no separate travel surcharge.",
+    "cancellation": "Cancel at least 24 hours before the beginning of the appointment arrival window to qualify for a refund of the prepaid service-call fee. For a late cancellation or no access, PAR retains that fee, may allow a documented exception, and does not add another penalty. Eligible refunds are initiated to the original payment method within five business days.",
     "access": "Customers must disclose property access, stacked or built-in installations, tight clearances, stairs, and other restrictions. If access is unavailable at the appointment, the late/no-access cancellation rule applies.",
-    "payment": "Accept credit cards, debit cards, cash, checks, Zelle, and ACH by arrangement. The service-call fee is due at booking. The remaining repair balance is due after authorized work is completed and the invoice is presented.",
+    "payment": "You can pay by credit or debit card, cash, check, Zelle, or ACH by arrangement. The service-call fee is due at booking. The remaining repair balance is due after authorized work is completed and the invoice is presented.",
     "partsDeposit": "Special-order repairs require a 30% deposit calculated on the tax-inclusive repair balance after the service-call credit, collected before parts are ordered. If cancelled after ordering, the refundable amount is reduced only by documented payment-processing and shipping costs.",
-    "warranty": "Replacement parts carry the applicable manufacturer warranty, commonly 90 days or one year depending on the part. Do not publish a general labor/workmanship warranty."
+    "warranty": "Replacement parts carry the applicable manufacturer warranty, commonly 90 days or one year depending on the part. The applicable parts-warranty term is identified for the repair."
   }
 }

@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname.replace(/\/$/, "");
 const site = join(root, "site");
-const routes = ["", "services/refrigerator-repair", "services/washer-repair", "services/dryer-repair", "services/dishwasher-repair", "services/oven-range-repair", "services/ice-machine-repair", "brands", "service-areas", "property-managers", "fees-warranty", "frequently-asked-questions", "request-service", "request-received", "privacy", "accessibility", "about", "service-request-terms"];
+const routes = ["", "services", "services/refrigerator-repair", "services/washer-repair", "services/dryer-repair", "services/dishwasher-repair", "services/oven-range-repair", "services/ice-machine-repair", "brands", "service-areas", "property-managers", "fees-warranty", "frequently-asked-questions", "request-service", "request-received", "privacy", "accessibility", "about", "service-request-terms"];
 
 test("every approved review route exists with core metadata", async () => {
   for (const route of routes) {
@@ -30,8 +30,9 @@ test("request form is Netlify-detectable and confirms only an accepted request",
   assert.match(html, /action="\/request-received\/"/);
   assert.match(html, /netlify-honeypot="company"/);
   assert.doesNotMatch(html, /novalidate/);
-  assert.match(html, /site\.js\?v=par11-rc5/);
-  assert.match(html, /site\.css\?v=par11-rc5/);
+  assert.match(html, /site\.js\?v=par12-rc1/);
+  assert.match(html, /site\.css\?v=par12-rc1/);
+  assert.match(html, /class="wide check"><input[^>]+><span>/);
   const js = await readFile(join(site, "assets", "site.js"), "utf8");
   assert.match(js, /event\.preventDefault\(\)/);
   assert.match(js, /fetch\("\/"/);
@@ -78,8 +79,22 @@ test("required assets and platform controls exist", async () => {
 test("unsupported authority and review claims are absent", async () => {
   for (const route of routes) {
     const html = await readFile(join(site, route, "index.html"), "utf8");
-    assert.doesNotMatch(html, /factory authorized|five[- ]star|best appliance|guaranteed response|starting at \$/i, route);
+    assert.doesNotMatch(html, /factory authorized|five[- ]star|best appliance|guaranteed response|starting at \$|50\+ years|more than 50 years/i, route);
+    assert.doesNotMatch(html, /do not add|do not publish|accept credit cards/i, route);
   }
+});
+
+test("services index and image evidence are mapped safely", async () => {
+  const home = await readFile(join(site, "index.html"), "utf8");
+  assert.match(home, /href="\/services\/">Appliances<\/a>/);
+  const redirects = await readFile(join(site, "_redirects"), "utf8");
+  assert.match(redirects, /\/services\.html \/services\/ 301!/);
+  const refrigerator = await readFile(join(site, "services", "refrigerator-repair", "index.html"), "utf8");
+  const ice = await readFile(join(site, "services", "ice-machine-repair", "index.html"), "utf8");
+  assert.doesNotMatch(refrigerator, /par-stacked-dryer/);
+  assert.doesNotMatch(ice, /par-wall-oven/);
+  assert.match(refrigerator, /Photo intentionally omitted/);
+  assert.match(ice, /Photo intentionally omitted/);
 });
 
 test("internal links resolve and pages keep one primary heading with useful image text", async () => {

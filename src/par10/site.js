@@ -11,6 +11,19 @@ menu?.addEventListener("click", () => {
   menu.setAttribute("aria-expanded", String(open));
   nav.classList.toggle("open", open);
 });
+nav?.addEventListener("click", event => {
+  if (event.target.closest("a")) {
+    menu?.setAttribute("aria-expanded", "false");
+    nav.classList.remove("open");
+  }
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && nav?.classList.contains("open")) {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+    menu.focus();
+  }
+});
 
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0 });
 document.querySelectorAll("[data-fee-lookup]").forEach(lookup => {
@@ -39,8 +52,41 @@ document.querySelectorAll("[data-fee-lookup]").forEach(lookup => {
   button?.addEventListener("click", show);
 });
 
+const routerLink = document.querySelector("[data-router-link]");
+const routerAppliance = document.querySelector("[data-router-appliance]");
+const routerBrand = document.querySelector("[data-router-brand]");
+const routerZip = document.querySelector("#home-zip");
+const updateRouter = () => {
+  if (!routerLink) return;
+  const params = new URLSearchParams();
+  if (routerAppliance?.value) params.set("appliance", routerAppliance.value);
+  if (routerZip?.value) params.set("zip", routerZip.value);
+  if (routerBrand?.value.trim()) params.set("brand-model", routerBrand.value.trim());
+  routerLink.href = `/request-service/${params.size ? `?${params}` : ""}`;
+};
+[routerAppliance, routerBrand, routerZip].forEach(control => control?.addEventListener("input", updateRouter));
+
+const brandSearch = document.querySelector("[data-brand-search]");
+const brandResult = document.querySelector("[data-brand-results]");
+brandSearch?.addEventListener("input", () => {
+  const term = brandSearch.value.trim().toLowerCase();
+  let shown = 0;
+  document.querySelectorAll("[data-brand-group]").forEach(group => {
+    const match = !term || group.dataset.brands.includes(term);
+    group.hidden = !match;
+    if (match) shown += 1;
+  });
+  brandResult.textContent = term ? (shown ? `Showing ${shown} matching brand ${shown === 1 ? "group" : "groups"}.` : "No listed brand matches that search. Include the brand and model in a request for office review.") : "Showing all brand groups.";
+});
+
 const form = document.querySelector("form[data-release-intake]");
 if (form) {
+  const params = new URLSearchParams(location.search);
+  for (const name of ["appliance", "zip", "brand-model"]) {
+    const control = form.elements.namedItem(name);
+    if (control && params.get(name)) control.value = params.get(name);
+  }
+  form.querySelector("[data-fee-zip]")?.dispatchEvent(new Event("blur"));
   let started = false;
   form.addEventListener("input", () => { if (!started) { started = true; track("request_start", { source_path: location.pathname }); } }, { once: true });
   form.addEventListener("submit", async event => {
