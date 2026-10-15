@@ -10,7 +10,7 @@ const routes = ["", "services", "services/refrigerator-repair", "services/washer
 test("every approved review route exists with core metadata", async () => {
   for (const route of routes) {
     const html = await readFile(join(site, route, "index.html"), "utf8");
-    assert.match(html, /<h1>/, route);
+    assert.match(html, /<h1(?:\s[^>]*)?>/, route);
     assert.match(html, /<title>.+<\/title>/, route);
     assert.match(html, /<meta name="description"/, route);
     assert.match(html, /<link rel="canonical"/, route);
@@ -29,7 +29,8 @@ test("request form is Netlify-detectable and confirms only an accepted request",
   assert.match(html, /data-netlify="true"/);
   assert.match(html, /action="\/request-received\/"/);
   assert.match(html, /netlify-honeypot="company"/);
-  assert.doesNotMatch(html, /novalidate/);
+  assert.match(html, /novalidate/);
+  assert.match(html, /aria-labelledby="request-title"/);
   assert.match(html, /site\.js\?v=par12-rc3/);
   assert.match(html, /site\.css\?v=par12-rc3/);
   assert.match(html, /class="wide check"><input[^>]+><span>/);
@@ -100,7 +101,7 @@ test("services index and image evidence are mapped safely", async () => {
 test("internal links resolve and pages keep one primary heading with useful image text", async () => {
   for (const route of routes) {
     const html = await readFile(join(site, route, "index.html"), "utf8");
-    assert.equal((html.match(/<h1>/g) || []).length, 1, `${route}: one h1`);
+    assert.equal((html.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1, `${route}: one h1`);
     for (const match of html.matchAll(/<img[^>]+alt="([^"]*)"/g)) assert.ok(match[1].trim(), `${route}: non-empty image alt`);
     for (const match of html.matchAll(/href="(\/[^"]*)"/g)) {
       const pathname = match[1].split(/[?#]/)[0];
