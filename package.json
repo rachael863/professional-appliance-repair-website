@@ -5,7 +5,10 @@
   "type": "module",
   "description": "Dependency-free local preview for the Professional Appliance Repair website prototype.",
   "scripts": {
-    "dev": "node server.mjs"
+    "dev": "node server.mjs",
+    "build:par10": "node scripts/build-par10.mjs",
+    "test:par10": "node --test test/par10-site.test.mjs",
+    "verify:par10": "npm run build:par10 && npm run test:par10"
   },
   "engines": {
     "node": ">=18"

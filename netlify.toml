@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build:par10"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "20"
+

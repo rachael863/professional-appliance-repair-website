@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 84" role="img" aria-labelledby="title">
+  <title id="title">Professional Appliance Repair reversed logo</title>
+  <style>
+    @font-face{font-family:LogoDisplay;src:url('../../professional-appliance-repair-fonts/fonts/fraunces/Fraunces-Medium.ttf') format('truetype');font-weight:500}
+    @font-face{font-family:LogoMono;src:url('../../professional-appliance-repair-fonts/fonts/ibm-plex-mono/IBMPlexMono-SemiBold.ttf') format('truetype');font-weight:600}
+  </style>
+  <g transform="translate(10 10)">
+    <g fill="none" stroke="#FCFAF4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="22" width="18" height="28" rx="2"/><circle cx="14" cy="36" r="6.2"/><path d="M9 27h2M14 27h2M19 27h1"/>
+      <rect x="24.5" y="7" width="18" height="43" rx="2"/><path d="M24.5 25.5h18M37.5 13v7M37.5 31v8"/>
+      <rect x="44" y="17" width="15" height="33" rx="2"/><path d="M47.5 22h1M51 22h1M54.5 22h1M47 28h9v14h-9Z"/>
+    </g>
+    <path d="M5 55h54" fill="none" stroke="#D18762" stroke-width="2.6" stroke-linecap="round"/><circle cx="59" cy="55" r="2.6" fill="#D18762"/>
+  </g>
+  <text x="92" y="39" fill="#FCFAF4" font-family="LogoDisplay, Fraunces, Georgia, serif" font-size="31" font-weight="500" letter-spacing="-.5">Professional</text>
+  <text x="94" y="61" fill="#FCFAF4" font-family="LogoMono, 'IBM Plex Mono', monospace" font-size="10" font-weight="600" letter-spacing="2.3">APPLIANCE REPAIR</text>
+  <path d="M304 57h170" stroke="#D18762" stroke-width="2"/>
+  <circle cx="474" cy="57" r="3" fill="#D18762"/>
+</svg>
