@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname.replace(/\/$/, "");
 const site = join(root, "site");
-const routes = ["", "services/refrigerator-repair", "services/washer-repair", "services/dryer-repair", "services/dishwasher-repair", "services/oven-range-repair", "services/ice-machine-repair", "brands", "service-areas", "property-managers", "fees-warranty", "frequently-asked-questions", "request-service", "request-received", "privacy", "accessibility", "about"];
+const routes = ["", "services/refrigerator-repair", "services/washer-repair", "services/dryer-repair", "services/dishwasher-repair", "services/oven-range-repair", "services/ice-machine-repair", "brands", "service-areas", "property-managers", "fees-warranty", "frequently-asked-questions", "request-service", "request-received", "privacy", "accessibility", "about", "service-request-terms"];
 
 test("every approved review route exists with core metadata", async () => {
   for (const route of routes) {
@@ -23,16 +23,30 @@ test("staging indexing controls exist", async () => {
   assert.match(await readFile(join(site, "_headers"), "utf8"), /X-Robots-Tag: noindex, nofollow/);
 });
 
-test("request form is Netlify-detectable but browser transmission is disabled", async () => {
+test("request form is Netlify-detectable and confirms only an accepted request", async () => {
   const html = await readFile(join(site, "request-service", "index.html"), "utf8");
   assert.match(html, /name="service-request"/);
   assert.match(html, /data-netlify="true"/);
   assert.match(html, /action="\/request-received\/"/);
   assert.match(html, /netlify-honeypot="company"/);
+  assert.doesNotMatch(html, /novalidate/);
+  assert.match(html, /site\.js\?v=par11-rc4/);
+  assert.match(html, /site\.css\?v=par11-rc4/);
   const js = await readFile(join(site, "assets", "site.js"), "utf8");
   assert.match(js, /event\.preventDefault\(\)/);
-  assert.doesNotMatch(js, /request_submit_success|booking_completion|fetch\(/);
-  assert.match(js, /request_demo_complete/);
+  assert.match(js, /fetch\("\/"/);
+  assert.match(js, /request_submit_success/);
+  assert.match(js, /appointment_confirmed: false/);
+  assert.doesNotMatch(js, /booking_completion/);
+});
+
+test("owner-confirmed identity, hours, email, ZIPs and production origin are rendered", async () => {
+  const home = await readFile(join(site, "index.html"), "utf8");
+  assert.match(home, /proappliancerepairllc@gmail\.com/);
+  assert.match(home, /Monday–Friday, 8:00 AM–4:30 PM Central/);
+  assert.match(home, /https:\/\/proappliancefix\.com\//);
+  const areas = await readFile(join(site, "service-areas", "index.html"), "utf8");
+  for (const zip of ["70001", "70075", "70121", "70170"]) assert.match(areas, new RegExp(zip));
 });
 
 test("required assets and platform controls exist", async () => {
@@ -43,5 +57,19 @@ test("unsupported authority and review claims are absent", async () => {
   for (const route of routes) {
     const html = await readFile(join(site, route, "index.html"), "utf8");
     assert.doesNotMatch(html, /factory authorized|five[- ]star|best appliance|guaranteed response|starting at \$/i, route);
+  }
+});
+
+test("internal links resolve and pages keep one primary heading with useful image text", async () => {
+  for (const route of routes) {
+    const html = await readFile(join(site, route, "index.html"), "utf8");
+    assert.equal((html.match(/<h1>/g) || []).length, 1, `${route}: one h1`);
+    for (const match of html.matchAll(/<img[^>]+alt="([^"]*)"/g)) assert.ok(match[1].trim(), `${route}: non-empty image alt`);
+    for (const match of html.matchAll(/href="(\/[^"]*)"/g)) {
+      const pathname = match[1].split(/[?#]/)[0];
+      if (pathname === "/") continue;
+      const target = pathname.endsWith("/") ? join(site, pathname, "index.html") : join(site, pathname);
+      await access(target);
+    }
   }
 });

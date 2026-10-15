@@ -12,11 +12,11 @@ menu?.addEventListener("click", () => {
   nav.classList.toggle("open", open);
 });
 
-const form = document.querySelector("form[data-staging-demo]");
+const form = document.querySelector("form[data-release-intake]");
 if (form) {
   let started = false;
   form.addEventListener("input", () => { if (!started) { started = true; track("request_start", { source_path: location.pathname }); } }, { once: true });
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", async event => {
     event.preventDefault();
     form.querySelectorAll(".field-error").forEach(el => { el.classList.remove("field-error"); el.removeAttribute("aria-invalid"); });
     const invalid = [...form.elements].filter(el => el.willValidate && !el.checkValidity());
@@ -28,16 +28,26 @@ if (form) {
       summary.focus();
       return;
     }
+    const button = form.querySelector('[type="submit"]');
     summary.hidden = true;
-    form.hidden = true;
-    const receipt = document.querySelector("#demo-receipt");
-    receipt.hidden = false;
-    receipt.focus();
-    track("request_demo_complete", { transmitted: false });
-  });
-  document.querySelector("[data-reset-form]")?.addEventListener("click", () => {
-    document.querySelector("#demo-receipt").hidden = true;
-    form.hidden = false;
-    form.querySelector("input,select,textarea")?.focus();
+    button.disabled = true;
+    button.textContent = "Sending…";
+    try {
+      const body = new URLSearchParams(new FormData(form));
+      const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+      form.hidden = true;
+      const receipt = document.querySelector("#request-receipt");
+      receipt.hidden = false;
+      receipt.focus();
+      track("request_submit_success", { accepted_for: "office_review", appointment_confirmed: false });
+    } catch {
+      summary.hidden = false;
+      summary.textContent = "The request was not confirmed as received. Your entries are still here. Retry, call, or email the office.";
+      summary.focus();
+    } finally {
+      button.disabled = false;
+      button.textContent = "Send service request";
+    }
   });
 }

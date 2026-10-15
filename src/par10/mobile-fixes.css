@@ -1,0 +1,2 @@
+:root{--action:#d13f28}
+@media(max-width:820px){.mobile-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px}}
