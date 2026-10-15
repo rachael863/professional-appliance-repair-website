@@ -12,6 +12,33 @@ menu?.addEventListener("click", () => {
   nav.classList.toggle("open", open);
 });
 
+const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0 });
+document.querySelectorAll("[data-fee-lookup]").forEach(lookup => {
+  const input = lookup.querySelector("[data-fee-zip]");
+  const result = lookup.querySelector("[data-fee-result]");
+  const button = lookup.querySelector("[data-fee-check]");
+  let fees = {};
+  try { fees = JSON.parse(lookup.dataset.fees || "{}"); } catch { fees = {}; }
+  const show = () => {
+    const zip = input.value.replace(/\D/g, "").slice(0, 5);
+    input.value = zip;
+    if (zip.length !== 5) {
+      result.textContent = "Enter a complete five-digit ZIP.";
+      return;
+    }
+    if (Object.hasOwn(fees, zip)) {
+      result.textContent = `Service-call fee for ${zip}: ${money.format(fees[zip])}. ${lookup.dataset.tax} ${lookup.dataset.parking}`;
+      result.dataset.coverage = "listed";
+    } else {
+      result.textContent = `${lookup.dataset.fallback} You may submit a request for office review; it is not accepted or scheduled unless the office confirms coverage, a date, and an arrival window.`;
+      result.dataset.coverage = "office-review";
+    }
+  };
+  input.addEventListener("input", () => { if (input.value.replace(/\D/g, "").length >= 5) show(); });
+  input.addEventListener("blur", show);
+  button?.addEventListener("click", show);
+});
+
 const form = document.querySelector("form[data-release-intake]");
 if (form) {
   let started = false;

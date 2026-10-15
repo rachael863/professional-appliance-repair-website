@@ -9,16 +9,34 @@
   "productionOrigin": "https://proappliancefix.com",
   "appointmentRule": "A request is received only after the website reports acceptance. An appointment is confirmed only after the PAR office schedules it and directly confirms the date and arrival window with the customer.",
   "serviceZipCodes": [
-    "70001", "70002", "70003", "70004", "70005", "70006", "70032", "70043",
+    "70001", "70002", "70003", "70004", "70005", "70006", "70032", "70037", "70043",
     "70053", "70054", "70055", "70056", "70057", "70058", "70062", "70065",
-    "70072", "70075", "70114", "70115", "70116", "70117", "70118", "70119",
-    "70121", "70122", "70123", "70124", "70125", "70126", "70128", "70131", "70170"
+    "70072", "70075", "70092", "70094", "70112", "70113", "70114", "70115",
+    "70116", "70117", "70118", "70119", "70121", "70122", "70123", "70124",
+    "70125", "70126", "70128", "70130", "70131", "70170"
   ],
+  "serviceAreaFallback": "ZIP codes not included in the published service-area list are outside PAR's standard service area and must be reviewed by the office before service can be accepted or scheduled.",
+  "feeSchedule": {
+    "effectiveDate": "2026-10-15",
+    "approver": "Rachael Young",
+    "taxTreatment": "Fees are shown before tax; applicable tax is added.",
+    "parkingRule": "Parking costs are added to the service-call fee if incurred.",
+    "byZip": {
+      "70001": 125, "70002": 125, "70003": 125, "70004": 125, "70005": 125, "70006": 125,
+      "70032": 125, "70037": 145, "70043": 125,
+      "70053": 135, "70054": 135, "70055": 135, "70056": 135, "70057": 135, "70058": 135,
+      "70062": 125, "70065": 125, "70072": 135, "70075": 125, "70092": 145, "70094": 145,
+      "70112": 145, "70113": 145, "70114": 135, "70115": 125, "70116": 145, "70117": 125,
+      "70118": 125, "70119": 125, "70121": 125, "70122": 125, "70123": 125, "70124": 125,
+      "70125": 125, "70126": 125, "70128": 135, "70130": 135, "70131": 135, "70170": 145
+    }
+  },
   "brandGroups": {
     "Household and mainstream": ["Admiral", "Amana", "Electrolux", "Estate", "Frigidaire", "GE", "Haier", "Hisense", "Hotpoint", "Insignia", "Kenmore", "KitchenAid", "LG", "Magic Chef", "Maytag", "Midea", "Roper", "Sears", "Speed Queen", "Tappan", "Whirlpool"],
     "Premium and built-in": ["AGA", "American Range", "Asko", "Beko", "Bertazzoni", "Blomberg", "BlueStar", "Bosch", "Café", "Capital", "Dacor", "DCS", "Fisher & Paykel", "Fulgor Milano", "Gaggenau", "GE Profile", "JennAir", "La Cornue", "Miele", "Monogram", "Sub-Zero", "Thermador", "True", "Viking", "Wolf", "ZLINE"],
-    "Specialty cooking, ventilation and ice": ["Avanti", "Best", "Broan", "Danby", "EuroChef", "Forno", "Hoshizaki", "Ice-O-Matic", "ILVE", "Manitowoc", "Marvel", "NXR", "Perlick", "Scotsman", "Summit", "THOR", "U-Line", "Verona", "Westinghouse", "XO", "Zephyr"]
+    "Specialty cooking, ventilation and ice": ["Avanti", "Best", "Broan", "Danby", "EuroChef", "Forno", "Hoshizaki", "Ice-O-Matic", "ILVE", "Manitowoc", "Marvel", "NXR", "Perlick", "Scotsman", "Smeg", "Summit", "THOR", "U-Line", "Verona", "Westinghouse", "XO", "Zephyr"]
   },
+  "manufacturerAuthorizations": ["GE", "Forno", "Zephyr", "U-Line", "Marvel", "Smeg"],
   "capabilityNotes": [
     "Commercial ice service is limited to selected equipment and requires model and access review.",
     "Walk-in, countertop, RV/marine, and HVAC equipment are not accepted under the previously supplied scope.",
@@ -27,13 +45,13 @@
     "Altered equipment is reviewed case by case; warranty work requires provider approval before scheduling."
   ],
   "policyProposal": {
-    "fee": "Service-call pricing starts at $125 plus applicable sales tax. The exact amount and any additional charge are confirmed before booking. A $135 plus tax amount was previously approved for specified West Bank and paid-parking areas, but the exact address map still requires confirmation.",
+    "fee": "The service-call fee is shown after the customer enters a listed service ZIP. Fees are shown before tax; applicable tax is added. Parking costs are added to the service-call fee if incurred.",
     "credit": "The service-call fee is credited once toward the approved repair for the same appliance when the repair is approved within 30 days. Return diagnosis for the same appliance and original problem during that 30-day period does not require another service-call fee.",
     "travel": "Travel is included in the quoted service-call amount; do not add a separate travel surcharge.",
     "cancellation": "Cancellation notice received at least 24 hours before the beginning of the appointment arrival window qualifies for refund of the prepaid service-call fee. For late cancellation or no access, retain that fee, allow documented exceptions, and add no extra penalty. Eligible refunds are initiated to the original payment method within five business days.",
     "access": "Customers must disclose property access, stacked or built-in installations, tight clearances, stairs, and other restrictions. If access is unavailable at the appointment, the late/no-access cancellation rule applies.",
     "payment": "Accept credit cards, debit cards, cash, checks, Zelle, and ACH by arrangement. The service-call fee is due at booking. The remaining repair balance is due after authorized work is completed and the invoice is presented.",
-    "partsDeposit": "Special-order repairs require a 30% deposit calculated on the tax-inclusive repair balance after the service-call credit, collected before parts are ordered. A cancellation after ordering is refundable after documented payment-processing and shipping costs; the calculation and disclosure still require final approval.",
+    "partsDeposit": "Special-order repairs require a 30% deposit calculated on the tax-inclusive repair balance after the service-call credit, collected before parts are ordered. If cancelled after ordering, the refundable amount is reduced only by documented payment-processing and shipping costs.",
     "warranty": "Replacement parts carry the applicable manufacturer warranty, commonly 90 days or one year depending on the part. Do not publish a general labor/workmanship warranty."
   }
 }

@@ -30,8 +30,8 @@ test("request form is Netlify-detectable and confirms only an accepted request",
   assert.match(html, /action="\/request-received\/"/);
   assert.match(html, /netlify-honeypot="company"/);
   assert.doesNotMatch(html, /novalidate/);
-  assert.match(html, /site\.js\?v=par11-rc4/);
-  assert.match(html, /site\.css\?v=par11-rc4/);
+  assert.match(html, /site\.js\?v=par11-rc5/);
+  assert.match(html, /site\.css\?v=par11-rc5/);
   const js = await readFile(join(site, "assets", "site.js"), "utf8");
   assert.match(js, /event\.preventDefault\(\)/);
   assert.match(js, /fetch\("\/"/);
@@ -46,7 +46,29 @@ test("owner-confirmed identity, hours, email, ZIPs and production origin are ren
   assert.match(home, /Monday–Friday, 8:00 AM–4:30 PM Central/);
   assert.match(home, /https:\/\/proappliancefix\.com\//);
   const areas = await readFile(join(site, "service-areas", "index.html"), "utf8");
-  for (const zip of ["70001", "70075", "70121", "70170"]) assert.match(areas, new RegExp(zip));
+  for (const zip of ["70001", "70037", "70075", "70092", "70094", "70112", "70121", "70130", "70170"]) assert.match(areas, new RegExp(zip));
+  assert.match(areas, /outside PAR's standard service area and must be reviewed by the office/);
+});
+
+test("signed 39-ZIP fee schedule is complete and powers an accessible lookup", async () => {
+  const config = JSON.parse(await readFile(join(root, "business-config.json"), "utf8"));
+  assert.equal(config.serviceZipCodes.length, 39);
+  assert.equal(Object.keys(config.feeSchedule.byZip).length, 39);
+  assert.deepEqual(Object.keys(config.feeSchedule.byZip).sort(), [...config.serviceZipCodes].sort());
+  assert.equal(config.feeSchedule.byZip["70001"], 125);
+  assert.equal(config.feeSchedule.byZip["70053"], 135);
+  assert.equal(config.feeSchedule.byZip["70037"], 145);
+  assert.equal(config.feeSchedule.taxTreatment, "Fees are shown before tax; applicable tax is added.");
+  assert.equal(config.feeSchedule.parkingRule, "Parking costs are added to the service-call fee if incurred.");
+  for (const route of ["service-areas", "fees-warranty", "request-service"]) {
+    const html = await readFile(join(site, route, "index.html"), "utf8");
+    assert.match(html, /data-fee-lookup/, route);
+    assert.match(html, /data-fee-result/, route);
+    assert.match(html, /&quot;70094&quot;:145/, route);
+  }
+  const js = await readFile(join(site, "assets", "site.js"), "utf8");
+  assert.match(js, /Object\.hasOwn\(fees, zip\)/);
+  assert.match(js, /office-review/);
 });
 
 test("required assets and platform controls exist", async () => {

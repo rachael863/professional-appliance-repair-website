@@ -1,2 +1,8 @@
 :root{--action:#d13f28}
 @media(max-width:820px){.mobile-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px}}
+.fee-lookup{margin:1.5rem 0;padding:1.25rem;background:var(--soft);border:1px solid var(--line);border-radius:16px}
+.fee-lookup>label{display:block;font-weight:800;margin-bottom:.45rem}
+.fee-lookup-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.75rem}
+.fee-result{margin:.8rem 0 0;font-weight:750}
+.fee-result[data-coverage="office-review"]{color:var(--error)}
+@media(max-width:520px){.fee-lookup-row{grid-template-columns:1fr}.fee-lookup-row .button{width:100%}}
